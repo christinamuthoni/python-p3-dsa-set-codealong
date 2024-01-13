@@ -1,3 +1,18 @@
 class MySet:
 
-    pass
+    def __init__(self, enumerable = []):
+        self.dictionary ={}
+        for value in enumerable:
+            self.dictionary[value] = True
+
+    def add(self, value):
+        self.dictionary[value]= True   
+        return self    
+
+    def has(self, value):
+        return value in self.dictionary
+    
+    def delete(self, value):
+        self.dictionary.pop(value)
+        return self
+
